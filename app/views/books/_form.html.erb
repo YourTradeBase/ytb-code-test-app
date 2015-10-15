@@ -1,5 +1,6 @@
 Add a book for <%= user.name %>
-<%= form_for(:book, url: create_book_user_path(user.id)) do |f| %>
+<%= form_for(:book, url: user_books_path(user.id)) do |f| %>
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
